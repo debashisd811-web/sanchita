@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Happy Birthday Sanchita 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark;--pink:#ff5c9d;--gold:#ffd27a}
+html,body{height:100%;margin:0}
+body{background:radial-gradient(ellipse at 50% 20%,#4a1250,#14061f 70%);color:#fff;font-family:Georgia,serif;overflow:hidden;touch-action:pan-y}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+#bg{z-index:0}#hc{z-index:1}
+.page{position:fixed;inset:0;z-index:2;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px;pointer-events:none}
+.page>*{pointer-events:auto}
+.page.on{display:flex;animation:in .7s}
+@keyframes in{from{opacity:0;transform:scale(.94)}}
+h1{font-size:34px;margin:0;font-weight:normal;background:linear-gradient(90deg,var(--pink),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hint{font-size:17px;letter-spacing:1px;animation:pulse 1.6s infinite;margin-top:300px}
+@keyframes pulse{50%{opacity:.35}}
+.pol{background:#fffdf7;padding:12px 12px 44px;width:min(70vw,270px);box-shadow:0 14px 40px #000a;position:relative;transform:rotate(var(--r,-3deg));cursor:pointer;animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:rotate(var(--r,-3deg)) translateY(-8px)}}
+.pol:before{content:"";position:absolute;top:-12px;left:50%;width:80px;height:24px;margin-left:-40px;background:#ffd27acc;transform:rotate(3deg)}
+.ph{aspect-ratio:1/1.1;background:#eadfd0;color:#7a5a4a;display:flex;align-items:center;justify-content:center;font-size:14px;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.pol p{position:absolute;bottom:10px;left:0;right:0;margin:0;color:#4a2a3a;font:italic 18px 'Brush Script MT',cursive,Georgia}
+.nav{display:flex;gap:12px;align-items:center}
+.b{background:linear-gradient(90deg,var(--pink),#b05cff);color:#fff;border:0;border-radius:30px;padding:12px 24px;font:16px Georgia,serif;cursor:pointer;box-shadow:0 0 18px #ff5c9d77}
+.b.alt{background:#ffffff1f;box-shadow:none}
+.dots{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:0;right:0;z-index:3;display:flex;gap:7px;justify-content:center}
+.dots i{width:8px;height:8px;border-radius:50%;background:#fff4}.dots i.on{background:var(--pink);box-shadow:0 0 8px var(--pink)}
+.env{width:230px;height:150px;background:#f7c6d9;border-radius:8px;position:relative;cursor:pointer;box-shadow:0 10px 40px #000a;display:flex;align-items:center;justify-content:center;font-size:54px;animation:float 3s infinite}
+.letter{max-width:330px;background:#fffdf7;color:#4a2a3a;border-radius:10px;padding:20px;line-height:1.7;font-size:17px;text-align:left;box-shadow:0 10px 40px #000a;min-height:150px}
+.cake{font-size:80px;cursor:pointer;user-select:none}
+.song{background:#ffffff1c;border-radius:12px;padding:8px 12px;font-size:13px;position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:3}
+.song input{max-width:190px;color:#fff}
+</style></head><body>
+<canvas id="bg"></canvas><canvas id="hc"></canvas>
+<div class="dots" id="dots"></div>
+
+<section class="page on" id="p0"><div class="hint">✨ Sanchita, tap the heart ✨</div>
+  <div class="song" id="songbox"><input type="sanchita.mpeg" id="song" accept="audio/*"></div></section>
+
+<section class="page"><div class="pol" style="--r:-4deg"><div class="ph">📷 Tap to add photo 1</div><p>Our beginning 💖</p></div>
+  <div class="nav"><button class="b alt" data-g="-1">Back</button><button class="b" data-g="1">Next ➜</button></div></section>
+<section class="page"><div class="pol" style="--r:3deg"><div class="ph">📷 Tap to add photo 2</div><p>That smile ☀️</p></div>
+  <div class="nav"><button class="b alt" data-g="-1">Back</button><button class="b" data-g="1">Next ➜</button></div></section>
+<section class="page"><div class="pol" style="--r:-2deg"><div class="ph">📷 Tap to add photo 3</div><p>Crazy fun times 🎉</p></div>
+  <div class="nav"><button class="b alt" data-g="-1">Back</button><button class="b" data-g="1">Next ➜</button></div></section>
+<section class="page"><div class="pol" style="--r:4deg"><div class="ph">📷 Tap to add photo 4</div><p>Best of friends 🌸</p></div>
+  <div class="nav"><button class="b alt" data-g="-1">Back</button><button class="b" data-g="1">Next ➜</button></div></section>
+<section class="page"><div class="pol" style="--r:-3deg"><div class="ph">📷 Tap to add photo 5</div><p>Forever 💫</p></div>
+  <div class="nav"><button class="b alt" data-g="-1">Back</button><button class="b" data-g="1">Next ➜</button></div></section>
+
+<section class="page" id="cakep"><h1>Make a wish… 🎂</h1>
+  <div class="cake" id="cake">🎂<div style="font-size:14px;font-family:Georgia">tap the candle to blow it out</div></div>
+  <div class="nav"><button class="b alt" data-g="-1">Back</button></div></section>
+
+<section class="page" id="last"><h1>Happy Birthday<br>Sanchita! 💖</h1>
+  <div class="env" id="env">💌</div><div id="lt" class="letter" hidden></div>
+  <div class="nav"><button class="b alt" data-g="-1">Back</button><button class="b" id="again">Start again 🔁</button></div></section>
+
+<audio id="aud" loop></audio>
+<script>
+var PHOTOS=['sanchita1.jpeg','sanchita2.jpeg','sanchita3.jpeg','sanchita4.jpeg','sanchita5.jpeg'],SONG='sanchita.mpeg'; // optional: put photo data/URLs & song path here
+var pages=[].slice.call(document.querySelectorAll('.page')),cur=0,aud=document.getElementById('aud'),dots=document.getElementById('dots');
+pages.forEach(function(){dots.appendChild(document.createElement('i'))});
+function show(i){cur=Math.max(0,Math.min(pages.length-1,i));pages.forEach(function(p,k){p.classList.toggle('on',k==cur);dots.children[k].classList.toggle('on',k==cur)});hc.style.opacity=cur==0?1:0;if(cur==0)form();}
+document.querySelectorAll('[data-g]').forEach(function(b){b.onclick=function(){show(cur+ +b.dataset.g)}});
+document.getElementById('again').onclick=function(){document.getElementById('lt').hidden=true;document.getElementById('env').hidden=false;show(0)};
+document.getElementById('song').onchange=function(e){if(e.target.files[0])aud.src=URL.createObjectURL(e.target.files[0])};
+if(SONG)aud.src=SONG;
+// swipe
+var sx=0;document.addEventListener('touchstart',function(e){sx=e.touches[0].clientX});
+document.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-sx;if(cur>0&&cur<pages.length-1&&Math.abs(d)>70)show(cur+(d<0?1:-1))});
+// photos
+document.querySelectorAll('.pol').forEach(function(p,i){var ph=p.querySelector('.ph'),inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.hidden=true;p.appendChild(inp);
+ function set(s){ph.innerHTML='';var im=new Image();im.src=s;ph.appendChild(im)}
+ if(PHOTOS[i])set(PHOTOS[i]);p.onclick=function(){inp.click()};inp.onclick=function(e){e.stopPropagation()};inp.onchange=function(){if(inp.files[0])set(URL.createObjectURL(inp.files[0]))}});
+// background: stars + rising hearts
+var bg=document.getElementById('bg'),bx=bg.getContext('2d'),W,H,stars=[],hs=[];
+function rs(){W=innerWidth;H=innerHeight;[bg,hc].forEach(function(c){c.width=W;c.height=H})}
+addEventListener('resize',rs);var hc=document.getElementById('hc'),hx=hc.getContext('2d');rs();
+for(var i=0;i<90;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6,t:Math.random()*6});
+for(i=0;i<14;i++)hs.push({x:Math.random()*W,y:Math.random()*H,s:10+Math.random()*16,v:.3+Math.random()*.6});
+// particle heart
+var P=[],N=520;for(i=0;i<N;i++){P.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,t:i/N*Math.PI*2*3})}
+var formed=false,tm=0,burstT=0;
+function tgt(p,sc){var t=p.t%(Math.PI*2),r=.55+.45*((p.t*7)%1);return{x:W/2+16*Math.pow(Math.sin(t),3)*sc*r,y:H/2-40-(13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t))*sc*r}}
+function form(){formed=false;P.forEach(function(p){p.x=Math.random()*W;p.y=Math.random()*H});setTimeout(function(){formed=true},50)}
+hc.style.transition='opacity .8s';form();
+function loop(){tm+=.03;bx.clearRect(0,0,W,H);
+ stars.forEach(function(s){bx.globalAlpha=.4+.6*Math.abs(Math.sin(tm+s.t));bx.fillStyle='#fff';bx.beginPath();bx.arc(s.x,s.y,s.r,0,7);bx.fill()});
+ bx.globalAlpha=.5;hs.forEach(function(h){h.y-=h.v;if(h.y<-30){h.y=H+30;h.x=Math.random()*W}bx.font=h.s+'px serif';bx.fillText('💗',h.x,h.y)});
+ if(cur==0){hx.clearRect(0,0,W,H);var sc=Math.min(W,H)/38*(1+.06*Math.sin(tm*3)+burstT);
+  P.forEach(function(p){var q=tgt(p,sc);if(formed){p.vx+=(q.x-p.x)*.03;p.vy+=(q.y-p.y)*.03}p.vx*=.86;p.vy*=.86;p.x+=p.vx;p.y+=p.vy;
+   hx.fillStyle='hsl('+(330+Math.sin(p.t)*18)+',100%,'+(60+10*Math.sin(tm+p.t))+'%)';hx.shadowColor='#ff5c9d';hx.shadowBlur=8;hx.fillRect(p.x,p.y,3,3)});}
+ burstT*=.9;requestAnimationFrame(loop)}
+loop();
+document.getElementById('p0').onclick=function(e){if(e.target.closest('#songbox'))return;if(aud.src)aud.play().catch(function(){});burstT=.5;setTimeout(function(){show(1)},350)};
+// cake
+var blown=false;document.getElementById('cake').onclick=function(){if(blown)return;blown=true;this.firstChild.textContent='🎉🎂🎉';confetti();setTimeout(function(){show(cur+1)},1800)};
+function confetti(){for(var i=0;i<40;i++){var e=document.createElement('div');e.textContent=['💖','🎈','✨','🌸','🎊'][i%5];e.style.cssText='position:fixed;z-index:9;pointer-events:none;bottom:-30px;left:'+Math.random()*100+'vw;font-size:'+(16+Math.random()*24)+'px;transition:transform '+(3+Math.random()*3)+'s linear';document.body.appendChild(e);(function(x){requestAnimationFrame(function(){x.style.transform='translateY(-115vh) rotate('+Math.random()*360+'deg)'});setTimeout(function(){x.remove()},6500)})(e)}}
+// letter
+var txt='Dear Sanchita,\n\nTumi amar jibon er ekjon onek special bondhu. Tomar hashi ta shob dukkho bhulie dey. Ei jonmodin e tomar jonno rojoni gondhar moto sundor shopno, onek bhalobasa ar khushi roilo. Always hashte theko! 💖\n\nTomar bondhu,\nShrestha',li=0;
+document.getElementById('env').onclick=function(){this.hidden=true;var l=document.getElementById('lt');l.hidden=false;l.style.whiteSpace='pre-wrap';l.textContent='';confetti();li=0;(function t(){if(li<txt.length){l.textContent+=txt[li++];setTimeout(t,35)}})()};
+show(0);
+</script></body></html>
